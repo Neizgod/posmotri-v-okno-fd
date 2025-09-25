@@ -30,7 +30,8 @@ ul,
 ol,
 li,
 blockquote,
-fieldset {
+fieldset,
+body {
   margin: 0;
   padding: 0;
 }
@@ -74,10 +75,8 @@ ol {
   gap: 30px;
 }
 
-.result {
-}
-
 .result__video-container {
+  position: relative;
   height: 386px;
   width: 711px;
   margin-bottom: 16px;
@@ -110,7 +109,7 @@ ol {
 .search-form__label {
   display: flex;
   align-items: center;
-  width: fit-content;
+  min-width: fit-content;
   gap: 8px;
   cursor: pointer;
 }
@@ -130,16 +129,16 @@ ol {
   font-weight: 400;
   line-height: 100%;
   appearance: none;
-  min-width: 245px;
+  min-width: 240px;
 }
 
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7)
 }
 
-.search-form__checkbox-list {
+.search-form__checkbox-list{
   display: flex;
-  gap: 15px;
+  gap: 18px;
 }
 
 .search-form__pseudo-checkbox {
@@ -177,8 +176,9 @@ ol {
   font-weight: 700;
   color: #fff;
   font-size: inherit;
-  padding: 6px 0;
+  padding: 5px 0;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .search-form__submit-button {
@@ -204,7 +204,7 @@ ol {
   outline-offset: 1px;
 }
 
-.content__details{
+.content__details {
   height: 100%;
   width: 100%;
 }
@@ -215,19 +215,22 @@ ol {
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
 }
 
-.content__accent:first-child{
+.content__accent:first-child {
   color: #545050;
 }
 
 .content__list-container {
+  position: relative;
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 399px;
 }
 
 .content__list {
@@ -279,14 +282,17 @@ ol {
   font-weight: 700;
   font-size: 30px;
   text-overflow: ellipsis;
+  font-family: 'Oswald', sans-serif;
 }
 
 .content__video-card-description {
-  line-height: 16.2px;
-  line-clamp: 4;
+  display: -webkit-box;
+  line-height: 10.2px;
+  -webkit-line-clamp: 4;
+  font-weight: 400;
 }
 
-.content__video-card-thumbnail{
+.content__video-card-thumbnail {
   height: 103px;
   min-width: 194px;
   object-fit: cover;
